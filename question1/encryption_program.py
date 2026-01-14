@@ -55,7 +55,6 @@ def decrypt_file(shift1, shift2):
             outfile.write(new_char)
 
 
-# ---------- Verification Function ----------
 def verify_decryption():
     with open("raw_text.txt", "r") as file1, open("decrypted_text.txt", "r") as file2:
         if file1.read() == file2.read():
@@ -63,8 +62,6 @@ def verify_decryption():
         else:
             print("Decryption failed! Files do not match.")
 
-
-# ---------- Main Program ----------
 def main():
     shift1 = int(input("Enter shift1 value: "))
     shift2 = int(input("Enter shift2 value: "))
@@ -72,7 +69,4 @@ def main():
     encrypt_file(shift1, shift2)
     decrypt_file(shift1, shift2)
     verify_decryption()
-
-
-# Run the program
 main()
